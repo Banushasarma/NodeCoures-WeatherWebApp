@@ -13,10 +13,12 @@ const publicDir = path.join(__dirname, '../public')
 const viewsDir = path.join(__dirname, '../templates/views')
 const partialsDir = path.join(__dirname, '../templates/partials')
 
+
 //Set path directries to express
 app.set('view engine', 'hbs')
 app.set('views', viewsDir)
 hbs.registerPartials(partialsDir)
+
 
 //Set express to serve dynamic files
 app.use(express.static(publicDir))
